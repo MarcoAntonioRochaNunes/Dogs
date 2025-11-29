@@ -6,7 +6,8 @@ const Input = ({ label, type, name, value, onChange }) => {
     <div className={styles.wrapper}>
       <label htmlFor={name} className={styles.label}>{label}</label>
       <input id={name} name={name} type={type} value={value} onChange={onChange} className={styles.input} />
-      {error && <p className={styles.error}>{error}</p>}
+      <p className={styles.error}>Error</p>	
+      {/* {error && <p className={styles.error}>{error}</p>} */}
     </div>
       
   )
