@@ -12,9 +12,7 @@ const Header = () => {
     <header className={styles.header}>
       <nav className={`${styles.nav} container` }>
         <Link to="/" aria-label="Dogs - Home" className={styles.logo}><Dog /></Link>
-        {data ? (<Link to="/conta" className={styles.login}> {data.nome} </Link>) : (<Link to="/login" className={styles.login}> Login / Criar </Link>)}
-        {data && <button onClick={userLogout} className={styles.logout}>Sair</button>}
-        
+        {data ? (<Link to="/conta" className={styles.login}> {data.nome.charAt(0).toUpperCase() + data.nome.slice(1).toLowerCase()} </Link>) : (<Link to="/login" className={styles.login}> Login / Criar </Link>)}
       </nav>
     </header>
   )
