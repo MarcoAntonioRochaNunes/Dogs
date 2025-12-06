@@ -40,6 +40,12 @@ button, input{
   padding: 0 1rem;
   margin: 0 auto;
 }
+
+.mainContainer{
+  margin-top: 2rem;
+
+}
+
 .title{
   font-family: var(--type-second);
   line-height: 1;
