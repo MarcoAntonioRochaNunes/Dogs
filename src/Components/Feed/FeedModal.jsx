@@ -4,6 +4,7 @@ import useFetch from '../../Hooks/useFetch'
 import { PHOTO_GET } from '../../api'
 import Loading from '../Helper/Loading'
 import Error from '../Helper/Error'
+import PhotoContent from '../Photo/PhotoContent'
 
 const FeedModal = ({photo}) => {
 
@@ -13,13 +14,13 @@ const FeedModal = ({photo}) => {
     const fetchPhoto = async () => {
       const {url, options} = PHOTO_GET(photo.id);
       const {response, json} = await request(url, options);
-      console.log(response)
-      console.log(json)
     }
+    fetchPhoto();
   }, [photo, request]);
+  console.log(data);
 
   return (
-    <div>
+    <div className={styles.modal}>
       {error && <Error error={error} />}
       {loading && <Loading />}
       {data && <PhotoContent data={data} />}
