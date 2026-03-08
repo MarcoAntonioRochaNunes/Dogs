@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from './PhotoContent.module.css'
+import { UserContext } from '../../UserContext';
 
-const PhotoComments = () => {
+const PhotoComments = ({id, comments}) => {
+  const {login} = React.useContext(UserContext);
   return (
     <div className={styles.comments}>
-      teste
+      testesss
     </div>
   )
 }
