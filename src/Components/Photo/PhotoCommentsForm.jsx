@@ -1,8 +1,8 @@
 import React from 'react'
 
-const PhotoCommentsForm = () => {
+const PhotoCommentsForm = ({id}) => {
   return (
-    <div>PhotoCommentsForm</div>
+    <div>PhotoCommentsForm {id}</div>
   )
 }
 
